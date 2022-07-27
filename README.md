@@ -1,75 +1,65 @@
 # Project REST-Rant
+[1. Still in the README, document the data we'll be storing for places (restaurants). You can choose whether to do this in a list, table, or other format.
 
-REST-Rant is an app where users can review restaurants.
-Method
+Your places should have a name (string), city (string), state (string), cuisines (string) and a pic (string)]
 
-Path
+TBD - SUMMARY
 
-Purpose
+Tech Usage
+CSS Framework: Bootstrap
 
-GET
+Stack: MongoDB, Express, NodeJS
 
-/
+Server-Side Rendering: JSX
 
-Home page
+Node Modules: method-override, dotenv, express-react-views
 
-GET
+Routes
 
-/places
+ | Method | Path	 | Purpose |
+ | --------- | ---------- | -----| 
+ | GET	 | /	 | The home page | 
+ | GET	 | /places	 | Index page listing all places | 
+ | GET	 | /places/new	New form for a place | 
+ | POST	 | /places	Create a new place | 
+ | GET	 | /places/:id	Show one place in detail (Associated rants, new rant form, delete rant button) | 
+ | GET	 | /places/:id/edit	 | Edit form for a place | 
+ | PUT	 | /places/:id | 	Make changes to existing place | 
+ | DELETE | 	/places/:id	 | Delete a place | 
+ | POST	 | /places/:id/rant	 | Add rant to a place
+ | DELETE	 | /places/:id/rant/:rantId	 | Delete a rant | 
+Database
+places
 
-Places index page
+ | Field	 | Type | 
+  | --------- | ---------- |
+ | _id	 | Object ID | 
+ | name	 | String | 
+ | city	 | String | 
+ | state	 | String | 
+ | cuisines	 | String | 
+ | pic	 | String | 
+ | rants | 
 
-POST
+ | Field	 | Type | 
+  | --------- | ---------- |
+ | _id	 | Object ID | 
+ | place_id	 | ref(places) Object_Id | 
+ | rant	 | Boolean | 
+ | rating	 | Number | 
+ | comment | 	String | 
+ | reviewer	 | String | 
 
-/places
+Planning
+User Stories
+TBD
 
-Create new place
+Wireframes
+TBD
 
-GET
+Notes
+Possible bonus ideas:
 
-/places/new
-
-Form page for creating a new place
-
-GET
-
-/places/:id
-
-Details about a particular place
-
-PUT
-
-/places/:id
-
-Update a particular place
-
-GET
-
-/places/:id/edit
-
-Form page for editing an existing place
-
-DELETE
-
-/places/:id
-
-Delete a particular place
-
-POST
-
-/places/:id/rant
-
-Create a rant (comment) about a particular place
-
-DELETE
-
-/places/:id/rant/:rantId
-
-Delete a rant (comment) about a particular place
-
-GET
-
-*
-
-404 page (matches any route not defined above)
-
+Update for comments
+Aggregate rating for a place
+Auto-complete state dropdown
