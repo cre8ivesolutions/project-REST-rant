@@ -5,13 +5,9 @@ const app = express()
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
-app.use('/places', require('./controllers/places'))
-// GET /places
-  
+app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  res.send('Hello world home page')
-})
+app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
     res.render('home')
