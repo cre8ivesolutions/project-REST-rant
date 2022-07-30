@@ -28,11 +28,11 @@ nav a {
 }
 
 nav a:hover {
-    color: pink;
+    color: rgb(200, 150, 158);
     text-decoration: none;
 }
 body {
-  background-color: lightblue;
+  background-image: linear-gradient(to bottom right, cornflowerblue, white);;
   text-align: center;
 }
 
