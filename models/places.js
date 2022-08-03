@@ -7,7 +7,7 @@ module.exports = [{
     // Photo by <a href="https://unsplash.com/@mab_studio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michele Blackwell</a> on <a href="https://unsplash.com/s/photos/restaurant-food-square?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
   }, {
-    name: 'Buck and Honeys',
+    name: 'Buck N` Honeys',
     city: 'Madison',
     state: 'WI',
     cuisines: 'American, Traditional',

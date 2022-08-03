@@ -6,9 +6,6 @@ router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
-router.get('/', (req, res) => {
-  res.render('places/index', { places })
-})
 
 router.get('/:id', (req, res) => {
   let id = Number(req.params.id)
@@ -21,6 +18,10 @@ router.get('/:id', (req, res) => {
   else {
     res.render('places/show', { place: places[id] })
   }
+})
+
+router.get('/', (req, res) => {
+  res.render('places/index', { places })
 })
 
 router.post('/', (req, res) => {

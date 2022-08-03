@@ -1,45 +1,76 @@
-h1 {
-    text-align: center;
-    color: cornflowerblue;
-  }
-  img {
-    /* display: block; */
-    width: 20vw;
-    height: auto;
-  }
-  nav {
-    background-color: cornflowerblue;
-    padding: 10px;
+.btn, button {
+  border-radius: 2em;
+  margin: 1em;
+  background-color: rgb(55, 97, 177);
+}
+.hero {
+  min-width: 50vw;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 25px;
-}
-
-nav a {
-    color: white;
-    font-size: 1.5em;
-}
-
-nav a:hover {
-    color: rgb(200, 150, 158);
-    text-decoration: none;
-}
 body {
-  background-image: linear-gradient(to bottom right, cornflowerblue, white);;
+  background-image: linear-gradient(to bottom right, cornflowerblue, white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 50%;
+  min-height: 80vh;
+  margin: 2em;
+  border-radius: 2em;
+  padding: 1em;
 }
-
+nav a{
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  color: rgb(55, 97, 177);
+  text-transform: uppercase;
+  font-size: 1.9em;
+  font-weight: 600;
+  padding: 1em;
+}
+img {
+  width: 25vw;
+  height: auto;
+}
+nav {
+  background-color: rgba(255, 255, 255, 0.331);
+  padding: 1em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: .1em;
+  margin-bottom: 1em;
+  border-radius: 2em;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  margin-right: 25px;
+}
+nav a {
+  color: white;
+  font-size: 1.5em;
+}
+nav a:hover {
+  color: rgb(55, 97, 177);
+  text-decoration: none;
+  font-size: 1.7em;
+}
 main {
-  margin-right: 20px;
-  margin-left: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.331);
+  border-radius: 2em;
+  min-height: 73vh;
 }
-
-  
+.caption {
+  font-size: .75em;
+}
+p {
+  font-size: .8em;
+}
+h2 {
+  font-size: 1.6em;
+}
