@@ -8,7 +8,7 @@ function index (data) {
 
       <div className="col-sm-6">
         <h2>
-          <a href={`/places/${index}`} >
+          <a href={`/places/${index}`}>
             {place.name}
           </a>
         </h2>
@@ -23,7 +23,6 @@ function index (data) {
           Located in {place.city}, {place.state}
         </p>
       </div>
-  
     )
   })
   

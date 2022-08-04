@@ -10,9 +10,7 @@ function Def (html) {
             </head>
 
             <body>
-            <nav 
-            // className="navbar navbar-light bg-light justify-content-between"
-            >
+            <nav>
             <a className ="navbar-brand"></a>
                 <ul>
                     <li>
