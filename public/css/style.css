@@ -1,7 +1,10 @@
 .btn, button {
   border-radius: 2em;
-  margin: 1em;
+  /* margin: 1em; */
   background-color: rgb(55, 97, 177);
+  max-width: 20vw;
+  margin: auto;
+  margin-top: 1em;
 }
 .hero {
   min-width: 50vw;
