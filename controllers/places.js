@@ -78,7 +78,7 @@ router.post('/', (req, res) => {
         // Dig into req.body and make sure data is valid
         if (!req.body.pic) {
             // Default image if one is not provided
-            req.body.pic = 'public\images\goodfood.jpg'
+            req.body.pic = 'public/images/goodfood.jpg'
         }
         if (!req.body.city) {
             req.body.city = 'Anytown'
@@ -92,8 +92,5 @@ router.post('/', (req, res) => {
         res.redirect(`/places/${id}`)
     }
   })
-  
-  
-  
 
 module.exports = router
