@@ -2,7 +2,7 @@
   border-radius: 2em;
   /* margin: 1em; */
   /* background-color: rgb(55, 97, 177); */
-  max-width: 15vw;
+  width: 10vw;
   margin: auto;
   margin-top: 1em;
 }
@@ -10,10 +10,9 @@
   min-width: 50vw;
 }
 .showImg {
-  min-width: 30vw;
+  min-width: 35vw;
   margin: 1em;
   border-radius: 2em;
-  display: block;
 }
 
 body {
@@ -36,8 +35,6 @@ h1 {
   text-align: center;
   color: rgb(55, 97, 177);
   text-transform: uppercase;
-  /* font-size: 1.9em; */
-  /* font-weight: 600; */
   padding: 1em;
 }
 img {
@@ -81,5 +78,9 @@ p {
   font-size: .8em;
 }
 h2 {
-  font-size: 1.6em;
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+h4 {
+  text-overflow: clip;
 }

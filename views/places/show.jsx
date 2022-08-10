@@ -8,14 +8,14 @@ function show (data) {
 <div className="row">
       <div className="col-sm-6">
           <img className="showImg" src={data.place.pic} alt={data.place.name} />
-          <h3>
+          <h4>
             Located in {data.place.city}, {data.place.state}
-          </h3>
+          </h4>
       </div>
       <div className="col-sm-6">
         <h1>{ data.place.name }</h1>
-        <h3>Currently unrated</h3>
         <h2>Rating </h2>
+        <h3>Currently unrated</h3>
         <h2>
           Description
         </h2>
