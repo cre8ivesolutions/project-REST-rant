@@ -1,13 +1,19 @@
 .btn, button {
   border-radius: 2em;
   /* margin: 1em; */
-  background-color: rgb(55, 97, 177);
-  max-width: 20vw;
+  /* background-color: rgb(55, 97, 177); */
+  max-width: 15vw;
   margin: auto;
   margin-top: 1em;
 }
 .hero {
   min-width: 50vw;
+}
+.showImg {
+  min-width: 30vw;
+  margin: 1em;
+  border-radius: 2em;
+  display: block;
 }
 
 body {
@@ -30,8 +36,8 @@ h1 {
   text-align: center;
   color: rgb(55, 97, 177);
   text-transform: uppercase;
-  font-size: 1.9em;
-  font-weight: 600;
+  /* font-size: 1.9em; */
+  /* font-weight: 600; */
   padding: 1em;
 }
 img {
