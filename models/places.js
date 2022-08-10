@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const placeSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  pic: { type: String, default: 'http://placekitten.com/350/350' },
+  pic: { type: String, default: 'https://images.unsplash.com/photo-1541086095944-f4b5412d3666?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80' },
   cuisines: { type: String, required: true },
   city: { type: String, default: 'Anytown' },
   state: { type: String, default: 'USA' },
@@ -20,8 +20,6 @@ placeSchema.methods.showEstablished = function() {
 }
 
 module.exports = mongoose.model('Place', placeSchema)
-
-
 
 
 // module.exports = [{

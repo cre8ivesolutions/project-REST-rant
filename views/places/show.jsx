@@ -2,16 +2,18 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+
     return (
-        <Def>
-          <main>
-<div className="row">
-      <div className="col-sm-6">
-          <img className="showImg" src={data.place.pic} alt={data.place.name} />
+      <Def>
+        <main>
+          <h1>Add a New Place</h1>
+       <div className="row">
+         <div className="col-sm-6">
+           <img className="showImg" src={data.place.pic} alt={data.place.name} />
           <h4>
             Located in {data.place.city}, {data.place.state}
           </h4>
-      </div>
+         </div>
       <div className="col-sm-6">
         <h1>{ data.place.name }</h1>
         <h2>Rating </h2>
@@ -41,9 +43,5 @@ function show (data) {
    </Def>
     )
 }
-
- 
-
-
 module.exports = show
 
