@@ -11,26 +11,30 @@ router.get('/', (req, res) => {
       res.render('error404')
     })
 })
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
+  if (!req.body.pic) {
+    // Default image if one is not provided
+    req.body.pic = "https://images.unsplash.com/photo-1584536286788-78ae81c2c54e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80";
+  }
+
   db.Place.create(req.body)
-  .then(() => {
-      res.redirect('/places')
-  })
-  .catch(err => {
-    if (err && err.name == 'ValidationError') {
-      let message = 'Validation Error: '
-      for (var field in err.errors) {
-        message += `${field} was ${err.errors[field].value}. `
-        message += `${err.errors[field].message}`
+    .then(() => {
+      res.redirect("/places");
+    })
+    .catch((err) => {
+      if (err && err.name == "ValidationError") {
+        let message = "Validation Error: ";
+        for (var field in err.errors) {
+          message += `${field} was ${err.errors[field].value}. `;
+          message += `${err.errors[field].message}`;
+        }
+        console.log("Validation error message", message);
+        res.render("places/new", { message });
+      } else {
+        res.render("error404");
       }
-      console.log('Validation error message', message)
-      res.render('places/new', { message })
-  }
-  else {
-      res.render('error404')
-  }
-  })
-})
+    });
+});
 
 router.get('/new', (req, res) => {
   res.render('places/new')
