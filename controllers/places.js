@@ -10,14 +10,14 @@ router.get('/', (req, res) => {
       console.log(err) 
       res.render('error404')
     })
-})
-router.post("/", (req, res) => {
-  if (!req.body.pic) {
-    // Default image if one is not provided
-    req.body.pic = "https://images.unsplash.com/photo-1584536286788-78ae81c2c54e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80";
-  }
-
-  db.Place.create(req.body)
+  })
+  router.post("/", (req, res) => {
+    if (!req.body.pic) {
+      // Default image if one is not provided
+      req.body.pic = "https://images.unsplash.com/photo-1584536286788-78ae81c2c54e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80";
+    }
+    
+    db.Place.create(req.body)
     .then(() => {
       res.redirect("/places");
     })
@@ -34,15 +34,17 @@ router.post("/", (req, res) => {
         res.render("error404");
       }
     });
-});
-
-router.get('/new', (req, res) => {
-  res.render('places/new')
-})
-
-router.get('/:id', (req, res) => {
-  db.Place.findById(req.params.id)
-  .then(place => {
+  });
+  
+  router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+  
+  router.get('/:id', (req, res) => {
+    db.Place.findById(req.params.id)
+    .populate('comments')
+    .then(place => {
+      console.log(place.comments)
       res.render('places/show', { place })
   })
   .catch(err => {

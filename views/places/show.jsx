@@ -22,11 +22,10 @@ function show (data) {
       })
     }
     return (
-      console.log(comments)
       <Def>
         <main>
-          <h4>Add a New Place</h4>
           <div className="row">
+          <h4>Add a New Place</h4>
               <div className="col-sm-6">
               <img className="showImg" src={data.place.pic} alt={data.place.name} />
               <h4>
@@ -36,29 +35,27 @@ function show (data) {
             <div className="col-sm-6">
             <h1>{ data.place.name }</h1>
             <h2>Rating </h2>
-              {comments}
+            <br/>
             <h2>Description</h2>
-            <h3>
-              {data.place.showEstablished()}
-            </h3>
-            <h4>
-              Serving {data.place.cuisines}
-            </h4>
+            <h3>{data.place.showEstablished()}</h3>
+            <h4>Serving {data.place.cuisines}</h4>
                 <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
                   Edit
                 </a>     
+                {/* {` `} */}
                 <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                   <button type="submit" className="btn btn-danger">
                     Delete
                   </button>
                 </form> 
             </div>
-            <h2>Comments</h2>
-                {/* <p>No comments yet</p> */}
-                {comments}
-            </div>
-         </main>
-        </Def>)
+          </div>
+          <hr/>
+          <h2>Comments</h2>
+          <div className="row"/>
+              {comments}
+        </main>
+      </Def>);
 }
 module.exports = show
 
