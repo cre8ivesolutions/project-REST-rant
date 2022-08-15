@@ -11,7 +11,6 @@ function Def (html) {
 
             <body>
             <nav>
-            <a className ="navbar-brand"></a>
                 <ul>
                     <li>
                     <a href="/">HOME</a>
@@ -29,8 +28,6 @@ function Def (html) {
         </html>
     )
   }
-  
-
 module.exports = Def
 
 

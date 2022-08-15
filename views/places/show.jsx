@@ -11,12 +11,13 @@ function show (data) {
       comments = data.place.comments.map(c => {
         return (
           <div className="border">
-            <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
-            <h4>{c.content}</h4>
-            <h3>
-              <stong>- {c.author}</stong>
-            </h3>
-            <h4>Rating: {c.stars}</h4>
+            {/* <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2> */}
+            <h5>{c.content}</h5>
+            <h5>
+              <strong>- {c.author}</strong>
+            </h5>
+            <h4>Rating </h4>
+            <h5>Rating: {c.stars} STARS</h5>
           </div>
         )
       })
@@ -24,25 +25,21 @@ function show (data) {
     return (
       <Def>
         <main>
+          <h1>{ data.place.name }</h1>
           <div className="row">
-          <h4>Add a New Place</h4>
               <div className="col-sm-6">
               <img className="showImg" src={data.place.pic} alt={data.place.name} />
-              <h4>
+              <h5>
                 Located in {data.place.city}, {data.place.state}
-              </h4>
+              </h5>
             </div>
             <div className="col-sm-6">
-            <h1>{ data.place.name }</h1>
-            <h2>Rating </h2>
-            <br/>
-            <h2>Description</h2>
-            <h3>{data.place.showEstablished()}</h3>
-            <h4>Serving {data.place.cuisines}</h4>
+            <h3>Description</h3>
+            <h5>{data.place.showEstablished()}</h5>
+            <h6>Serving {data.place.cuisines}</h6>
                 <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
                   Edit
                 </a>     
-                {/* {` `} */}
                 <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                   <button type="submit" className="btn btn-danger">
                     Delete
@@ -51,9 +48,9 @@ function show (data) {
             </div>
           </div>
           <hr/>
-          <h2>Comments</h2>
-          <div className="row"/>
-              {comments}
+          <h4>Comments</h4>
+          {comments}
+          <button className="addPlace_btn">Add a new place</button>
         </main>
       </Def>);
 }
