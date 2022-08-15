@@ -39,6 +39,9 @@ body {
   color: aliceblue;
   background-color: rgb(55, 97, 177);
 }
+.form {
+  padding: 1.5em;
+}
 nav a{
   text-decoration: none;
 }
