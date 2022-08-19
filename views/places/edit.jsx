@@ -26,7 +26,7 @@ function edit_form (data) {
                     </div>
                     <div className="form-group">
                         <label htmlFor="cuisines">Cuisines</label>
-                        <input className="form-control" id="cuisines" name="cuisines" required />
+                        <input className="form-control" id="cuisines" name="cuisines" />
                     </div>
                     <div className="form-group col-sm-4">
                         <label htmlFor="founded">Founded</label>
